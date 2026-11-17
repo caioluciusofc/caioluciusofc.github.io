@@ -1,0 +1,2052 @@
+
+/* ==========================================
+   CAIO LUCIUS - PORTFÓLIO FUTURISTA
+   ========================================== */
+
+/* ==========================================
+   01 - CONFIGURAÇÕES GERAIS
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #080c1c;
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #00bfff;
+}
+
+main {
+    width: 100%;
+}
+
+/* ==========================================
+   02 - CHUVA BINÁRIA
+   ========================================== */
+
+#chuva-binaria {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* CONTEÚDO ACIMA DA CHUVA BINÁRIA */
+
+.cabecalho,
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================
+   03 - CARRO INTERATIVO
+   ========================================== */
+
+#formula87-mouse {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 70px;
+    height: auto;
+
+    z-index: 100;
+    pointer-events: none;
+
+    transform: translate3d(-200px, -200px, 0);
+    opacity: 0;
+
+    filter: none;
+    mix-blend-mode: screen;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    will-change: transform;
+}
+
+/* ==========================================
+   04 - RASTRO BINÁRIO DO CARRO
+   ========================================== */
+
+#rastro-formula87 {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 99;
+    pointer-events: none;
+
+    background: transparent;
+}
+
+/* DESATIVAR EM TELAS SEM MOUSE */
+
+@media (hover: none), (pointer: coarse) {
+
+    #formula87-mouse,
+    #rastro-formula87 {
+        display: none;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #formula87-mouse,
+    #rastro-formula87 {
+        display: none;
+    }
+}
+
+/* ==========================================
+   05 - CABEÇALHO E NAVEGAÇÃO
+   ========================================== */
+
+.cabecalho {
+    width: 100%;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background-color: #0d1225;
+    border-bottom: 1px solid #8a2be2;
+}
+
+.logo {
+    color: #00bfff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cabecalho nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cabecalho nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: color 0.3s ease;
+}
+
+.cabecalho nav a:hover,
+.cabecalho nav a:focus-visible {
+    color: #a855f7;
+}
+
+/* ==========================================
+   06 - APRESENTAÇÃO INICIAL
+   ========================================== */
+
+.hero {
+    min-height: calc(100vh - 85px);
+    min-height: calc(100dvh - 85px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.6;
+}
+
+/* ==========================================
+   07 - GARAGEM FUTURISTA
+   ========================================== */
+
+.carro-3d {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 2px solid #8a2be2;
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 85%,
+            rgba(168, 85, 247, 0.22),
+            transparent 65%
+        ),
+        radial-gradient(
+            ellipse at 50% 30%,
+            rgba(0, 191, 255, 0.20),
+            transparent 70%
+        ),
+        #10152b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 30px auto 0;
+
+    box-shadow:
+        0 0 15px rgba(138, 43, 226, 0.35),
+        0 0 35px rgba(0, 191, 255, 0.12),
+        inset 0 0 30px rgba(168, 85, 247, 0.12);
+
+    animation: pulsarGaragem87 4s ease-in-out infinite;
+
+    transition: box-shadow 0.4s ease;
+}
+
+/* ==========================================
+   08 - ILUMINAÇÃO PULSANTE
+   ========================================== */
+
+@keyframes pulsarGaragem87 {
+
+    0%, 100% {
+        box-shadow:
+            0 0 15px rgba(138, 43, 226, 0.35),
+            0 0 35px rgba(0, 191, 255, 0.12),
+            inset 0 0 30px rgba(168, 85, 247, 0.12);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px rgba(138, 43, 226, 0.65),
+            0 0 55px rgba(0, 191, 255, 0.30),
+            inset 0 0 45px rgba(168, 85, 247, 0.20);
+    }
+}
+
+.carro-3d:hover {
+    animation: none;
+
+    box-shadow:
+        0 0 25px rgba(138, 43, 226, 0.65),
+        0 0 50px rgba(0, 191, 255, 0.25),
+        inset 0 0 45px rgba(168, 85, 247, 0.18);
+}
+
+/* ==========================================
+   09 - IMAGEM DO CARRO
+   ========================================== */
+
+.imagem-carro {
+    display: block;
+
+    width: 100%;
+    max-width: 560px;
+    max-height: 100%;
+
+    object-fit: contain;
+    opacity: 0;
+}
+
+/* ENTRADA DO CARRO APÓS O LOADING */
+
+body.site-carregado .imagem-carro {
+    animation:
+        entradaFormula87 2s ease-out both,
+        motorLigado87 2.5s ease-in-out 2s infinite;
+}
+
+@keyframes entradaFormula87 {
+
+    from {
+        opacity: 0;
+        transform: translateX(-150px) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes motorLigado87 {
+
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -5px;
+    }
+}
+
+/* ==========================================
+   10 - SEÇÕES DO PORTFÓLIO
+   ========================================== */
+
+main section:not(.hero) {
+    min-height: 45vh;
+    padding: 80px 8%;
+
+    /* SEM LINHAS DIVISÓRIAS */
+    border-top: none;
+}
+
+main section:not(.hero) h2 {
+    color: #00bfff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+main section:not(.hero) p {
+    color: #c5c9dc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   11 - LISTA DE PROJETOS
+   ========================================== */
+
+.lista-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* ==========================================
+   12 - CARTÕES DOS PROJETOS
+   ========================================== */
+
+.projeto-card {
+    background-color: #10152b;
+    border: 1px solid #8a2be2;
+    border-radius: 15px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.projeto-card h3 {
+    color: #00bfff;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.projeto-card p {
+    color: #c5c9dc;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* STATUS DOS PROJETOS */
+
+.projeto-card span {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 8px 12px;
+
+    color: #ffffff;
+    background-color: #5720a0;
+
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.projeto-card .concluido {
+    
+    background-color: #008f5a;
+    color: #ffffff;
+}
+
+/* STATUS VERDE - DOCUMENTAÇÃO CONCLUÍDA */
+.projeto-card span.status-concluido {
+    background-color: #009966;
+    color: #ffffff;
+}
+
+/* EFEITO NEON */
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 0 25px rgba(138, 43, 226, 0.6);
+}
+
+/* ==========================================
+   13 - CARTÕES DAS HABILIDADES
+   ========================================== */
+
+.lista-habilidades {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.habilidade-card {
+    background-color: #10152b;
+
+    border: 1px solid #8a2be2;
+    border-radius: 15px;
+
+    padding: 30px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.habilidade-card h3 {
+    color: #00bfff;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.habilidade-card p {
+    color: #c5c9dc;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* STATUS */
+
+.habilidade-card span {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 8px 12px;
+
+    color: #ffffff;
+    background-color: #5720a0;
+
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.habilidade-card .planejado {
+    background-color: #174a70;
+}
+
+/* EFEITO NEON */
+
+.habilidade-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 0 25px rgba(138, 43, 226, 0.6);
+}
+
+/* ==========================================
+   14 - CARTÕES DOS CERTIFICADOS
+   ========================================== */
+
+.lista-certificados {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.certificado-card {
+    background-color: #10152b;
+
+    border: 1px solid #8a2be2;
+    border-radius: 15px;
+
+    padding: 30px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.certificado-card h3 {
+    color: #00bfff;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+main .certificado-card p {
+    color: #c5c9dc;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* STATUS */
+
+.certificado-card span {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 8px 12px;
+
+    color: #ffffff;
+    background-color: #008f5a;
+
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* EFEITO NEON */
+
+.certificado-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 0 25px rgba(138, 43, 226, 0.6);
+}
+
+/* ==========================================
+   15 - BOTÃO VISUALIZAR CERTIFICADO
+   ========================================== */
+
+.botao-certificado {
+    display: inline-block;
+
+    margin-top: 20px;
+    margin-left: 12px;
+    padding: 10px 18px;
+
+    background-color: #5720a0;
+    color: #ffffff;
+
+    border: 1px solid #a855f7;
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.botao-certificado:hover {
+    background-color: #8a2be2;
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.7);
+
+    transform: translateY(-3px);
+}
+
+.botao-certificado:focus-visible {
+    outline: 2px solid #00bfff;
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   16 - CARTÃO DO CURRÍCULO
+   ========================================== */
+
+/*
+   O CURRÍCULO VOLTA AO ESTILO ORIGINAL.
+   NÃO EXISTE GRID DE DUAS COLUNAS AQUI.
+*/
+
+.curriculo-card {
+    width: 100%;
+    max-width: 850px;
+
+    margin-top: 40px;
+    padding: 35px;
+
+    background-color: #10152b;
+
+    border: 1px solid #8a2be2;
+    border-radius: 15px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* TÍTULOS DO CURRÍCULO */
+
+.curriculo-card h3 {
+    color: #00bfff;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+/* TEXTOS DO CURRÍCULO */
+
+main .curriculo-card p {
+    color: #c5c9dc;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   17 - CABEÇALHO DO CURRÍCULO
+   ========================================== */
+
+.curriculo-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.curriculo-cabecalho h3 {
+    margin: 0;
+}
+
+/* APRESENTAÇÃO AO LADO DA FOTO */
+
+.curriculo-apresentacao {
+    flex: 1;
+    min-width: 0;
+}
+
+.curriculo-apresentacao h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.curriculo-apresentacao p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* FOTO PROFISSIONAL */
+
+.curriculo-foto {
+    display: block;
+
+    width: 140px;
+    height: 140px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+    object-position: center 30%;
+
+    border: 3px solid #a855f7;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 12px rgba(168, 85, 247, 0.6),
+        0 0 25px rgba(0, 191, 255, 0.25);
+}
+
+/* ==========================================
+   18 - STATUS DO CURRÍCULO
+   ========================================== */
+
+.curriculo-status {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 8px 14px;
+
+    background-color: #5720a0;
+    color: #ffffff;
+
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* ==========================================
+   19 - BOTÃO BAIXAR CURRÍCULO
+   ========================================== */
+
+.botao-curriculo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 25px;
+    padding: 14px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #5720a0,
+        #8a2be2
+    );
+
+    color: #ffffff;
+
+    border: 1px solid #a855f7;
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow:
+        0 0 12px rgba(138, 43, 226, 0.4);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.botao-curriculo:hover {
+    transform: translateY(-4px);
+
+    background: linear-gradient(
+        135deg,
+        #8a2be2,
+        #00bfff
+    );
+
+    box-shadow:
+        0 0 20px rgba(138, 43, 226, 0.8),
+        0 0 35px rgba(0, 191, 255, 0.4);
+}
+
+.botao-curriculo:focus-visible {
+    outline: 2px solid #00bfff;
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   20 - RODAPÉ DO CURRÍCULO
+   ========================================== */
+
+.curriculo-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.curriculo-rodape .curriculo-status {
+    margin-top: 0;
+}
+
+.curriculo-rodape .botao-curriculo {
+    margin-top: 0;
+}
+
+/* EFEITO NEON DO CURRÍCULO */
+
+.curriculo-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 25px rgba(138, 43, 226, 0.5);
+}
+
+/* ==========================================
+   21 - SOBRE MIM
+   ========================================== */
+
+/*
+   SOBRE MIM PERMANECE COMO SEÇÃO INDEPENDENTE.
+   ESTE CSS NÃO ALTERA O CONTEÚDO DO CURRÍCULO.
+*/
+
+#sobre {
+    width: 100%;
+}
+
+#sobre h2 {
+    color: #00bfff;
+}
+
+/* ==========================================
+   22 - SEÇÃO CONTATO
+   ========================================== */
+
+.lista-contatos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.contato-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #10152b;
+
+    border: 1px solid #8a2be2;
+    border-radius: 15px;
+
+    padding: 30px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contato-card h3 {
+    color: #00bfff;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+main .contato-card p {
+    color: #c5c9dc;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* BOTÕES DE CONTATO */
+
+.contato-card a {
+    display: inline-block;
+    align-self: flex-start;
+
+    margin-top: auto;
+    padding: 12px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #5720a0,
+        #8a2be2
+    );
+
+    color: #ffffff;
+
+    border: 1px solid #a855f7;
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* EFEITO NEON */
+
+.contato-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 25px rgba(138, 43, 226, 0.6);
+}
+
+.contato-card a:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 18px rgba(168, 85, 247, 0.7);
+}
+
+.contato-card a:focus-visible {
+    outline: 2px solid #00bfff;
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   23 - TELA DE CARREGAMENTO
+   ========================================== */
+
+#loading-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    background-color: #080c1c;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    transition: opacity 0.7s ease;
+}
+
+/* ==========================================
+   24 - CÍRCULO DO LOADING
+   ========================================== */
+
+.loading-circle {
+    width: 180px;
+    height: 180px;
+
+    position: relative;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================
+   25 - TEXTOS DO LOADING
+   ========================================== */
+
+.loading-text {
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#loading-percent {
+    color: #00bfff;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+.loading-message {
+    color: #aeb9d6;
+
+    margin-top: 30px;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* ==========================================
+   26 - ARCO ROXO GIRATÓRIO
+   ========================================== */
+
+.loading-circle::before {
+    content: "";
+
+    position: absolute;
+    inset: -5px;
+
+    border: 4px solid transparent;
+    border-top: 4px solid #a855f7;
+    border-radius: 50%;
+
+    animation: girarLoading87 1.5s linear infinite;
+}
+
+/* ==========================================
+   27 - ESFERA ROXA LUMINOSA
+   ========================================== */
+
+.loading-circle::after {
+    content: "";
+
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: #d9a0ff;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px 4px #a855f7,
+        0 0 22px 8px rgba(168, 85, 247, 0.6),
+        0 0 38px 12px rgba(138, 43, 226, 0.3);
+
+    transform-origin: -59px 75px;
+
+    animation: girarLoading87 1.5s linear infinite;
+}
+
+/* ==========================================
+   28 - ROTAÇÃO DO LOADING
+   ========================================== */
+
+@keyframes girarLoading87 {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==========================================
+   29 - FINALIZAÇÃO DO LOADING
+   ========================================== */
+
+#loading-screen.loading-finalizado {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ==========================================
+   30 - RESPONSIVIDADE PARA TABLETS
+   ========================================== */
+
+@media (max-width: 850px) {
+
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .cabecalho nav {
+        justify-content: center;
+    }
+
+    .lista-projetos,
+    .lista-habilidades,
+    .lista-certificados,
+    .lista-contatos {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .carro-3d {
+        height: 250px;
+    }
+
+    main section:not(.hero) {
+        padding: 60px 6%;
+    }
+
+    .curriculo-card {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================
+   31 - RESPONSIVIDADE PARA CELULARES
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 50px 18px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .curriculo-card {
+        padding: 22px;
+    }
+
+    .curriculo-cabecalho {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .curriculo-foto {
+        width: 120px;
+        height: 120px;
+    }
+
+    .curriculo-rodape {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .curriculo-rodape .curriculo-status {
+        align-self: flex-start;
+    }
+
+    .curriculo-rodape .botao-curriculo {
+        width: 100%;
+    }
+
+    main section:not(.hero) h2 {
+        font-size: 30px;
+    }
+}
+
+/* ==========================================
+   32 - ACESSIBILIDADE
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .carro-3d,
+    .loading-circle::before,
+    .loading-circle::after {
+        animation: none;
+    }
+
+    .imagem-carro {
+        animation: none;
+    }
+
+    body.site-carregado .imagem-carro {
+        opacity: 1;
+        animation: none;
+    }
+
+    #loading-screen {
+        transition: none;
+    }
+
+    .projeto-card,
+    .habilidade-card,
+    .certificado-card,
+    .curriculo-card,
+    .contato-card {
+        transition: none;
+    }
+}
+
+
+/* ==========================================
+   CURRÍCULO E SOBRE MIM - DUAS COLUNAS
+   ========================================== */
+
+/* CURRÍCULO E SOBRE MIM - DUAS COLUNAS */
+
+.curriculo-sobre-layout {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+
+    align-items: stretch;
+}
+
+/* EVITAR O ESPAÇAMENTO PADRÃO DAS SEÇÕES */
+
+main .curriculo-sobre-layout > section {
+    min-width: 0;
+    min-height: 0;
+    padding: 70px 0;
+}
+
+/* CURRÍCULO */
+
+.curriculo-sobre-layout .curriculo-card {
+    width: 100%;
+    max-width: none;
+}
+
+/* CARTÃO SOBRE MIM */
+
+.sobre-card {
+    width: 100%;
+    margin-top: 40px;
+    padding: 35px;
+
+    background-color: #10152b;
+
+    border: 1px solid #8a2be2;
+    border-radius: 15px;
+
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sobre-card h3 {
+    color: #00bfff;
+    font-size: 26px;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+main .sobre-card p {
+    color: #c5c9dc;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.sobre-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 25px rgba(138, 43, 226, 0.5);
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS E CELULARES
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .curriculo-sobre-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .curriculo-sobre-layout > section {
+        padding: 50px 0;
+    }
+
+    .curriculo-sobre-layout .curriculo-card,
+    .sobre-card {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .curriculo-sobre-layout {
+        width: 88%;
+    }
+
+    .sobre-card {
+        padding: 22px;
+    }
+
+    .sobre-card h3 {
+        font-size: 22px;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sobre-card {
+        transition: none;
+    }
+}
+
+
+/* ==========================================
+   CONTATO - ÍCONES FUTURISTAS
+   ========================================== */
+
+#contato {
+    text-align: center;
+}
+
+/* DESCRIÇÃO */
+
+#contato .contato-descricao {
+    max-width: 700px;
+    margin: 0 auto 45px;
+
+    color: #c5c9dc;
+    line-height: 1.6;
+}
+
+/* ORGANIZAÇÃO DOS ÍCONES */
+
+.contato-icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 35px;
+    margin-top: 30px;
+}
+
+/* CÍRCULO DOS ÍCONES */
+
+.contato-icone {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #10152b;
+
+    border: 2px solid #8a2be2;
+    border-radius: 50%;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    box-shadow:
+        0 0 12px rgba(138, 43, 226, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* TAMANHO DOS SÍMBOLOS */
+
+.contato-icone svg {
+    display: block;
+
+    width: 42px;
+    height: 42px;
+
+    fill: currentColor;
+}
+
+/* LINKEDIN AZUL */
+
+.contato-icone.linkedin {
+    color: #00bfff;
+}
+
+/* EFEITO NEON */
+
+.contato-icone:hover {
+    transform: translateY(-8px) scale(1.08);
+
+    border-color: #00bfff;
+
+    box-shadow:
+        0 0 20px rgba(138, 43, 226, 0.8),
+        0 0 35px rgba(0, 191, 255, 0.4);
+}
+
+/* NAVEGAÇÃO POR TECLADO */
+
+.contato-icone:focus-visible {
+    outline: 3px solid #00bfff;
+    outline-offset: 5px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .contato-icones {
+        gap: 20px;
+    }
+
+    .contato-icone {
+        width: 72px;
+        height: 72px;
+    }
+
+    .contato-icone svg {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* MOVIMENTO REDUZIDO */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contato-icone {
+        transition: none;
+    }
+
+    .contato-icone:hover {
+        transform: none;
+    }
+}
+
+/* ==========================================
+   OCULTAR CARRO DE FÓRMULA 1
+   MANTER CHUVA BINÁRIA
+   ========================================== */
+
+#formula87-mouse {
+    display: none !important;
+}
+
+/* ==========================================
+   HERO PROFISSIONAL - DUAS COLUNAS
+   ========================================== */
+
+.hero {
+    position: relative;
+    min-height: calc(100vh - 85px);
+    min-height: calc(100dvh - 85px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 6%;
+}
+
+/* ORGANIZAÇÃO DAS DUAS COLUNAS */
+
+.hero-conteudo {
+    width: 100%;
+    min-width: 0;
+    max-width: 1500px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(280px, 0.8fr);
+
+    align-items: center;
+    gap: 70px;
+
+    margin: 0 auto;
+}
+
+/* ==========================================
+   COLUNA ESQUERDA - TEXTOS
+   ========================================== */
+
+.hero-texto {
+    min-width: 0;
+    text-align: left;
+}
+
+/* NOME */
+
+.hero-texto h1 {
+    color: #00bfff;
+
+    font-size: clamp(42px, 4.5vw, 76px);
+
+    line-height: 1.1;
+
+    margin: 0 0 24px;
+}
+
+/* FORMAÇÃO PROFISSIONAL */
+
+.hero .hero-formacao {
+    color: #d2d8eb;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+/* SEPARADOR */
+
+.hero-separador {
+    color: #a855f7;
+    margin: 0 8px;
+}
+
+/* ==========================================
+   FRASE PRINCIPAL
+   ========================================== */
+
+.hero-texto .frase-principal {
+    color: #ffffff;
+
+    font-size: clamp(24px, 2.2vw, 36px);
+
+    font-weight: 700;
+    line-height: 1.35;
+
+    margin: 0 0 28px;
+}
+
+/* SEGUNDA PARTE DA FRASE */
+
+.hero-texto .frase-principal span {
+    display: block;
+
+    color: #00bfff;
+
+    margin-top: 12px;
+}
+
+/* DESCRIÇÃO PROFISSIONAL */
+
+.hero .hero-texto .apresentacao-descricao {
+    color: #c5c9dc;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    max-width: 650px;
+    margin: 0;
+}
+
+/* ==========================================
+   COLUNA DIREITA - FOTO
+   ========================================== */
+
+.hero-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 0;
+}
+
+/* FOTO PROFISSIONAL */
+
+.hero .hero-foto {
+    position: static;
+
+    display: block;
+
+    width: min(100%, 330px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    border: 3px solid #8a2be2;
+    border-radius: 50%;
+
+    background-color: #10152b;
+
+    box-shadow:
+        0 0 20px rgba(138, 43, 226, 0.5),
+        0 0 40px rgba(0, 191, 255, 0.18);
+
+    transform: none;
+    margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        padding: 65px 6%;
+    }
+
+    .hero-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-imagem {
+        grid-row: 1;
+    }
+
+    .hero .hero-foto {
+        width: min(100%, 230px);
+    }
+
+    .hero-texto {
+        text-align: center;
+    }
+
+    .hero .hero-texto .apresentacao-descricao {
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        width: 100%;
+        min-width: 0;
+        padding: 45px 20px;
+    }
+
+    .hero-conteudo {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .hero-texto,
+    .hero-imagem {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero .hero-foto {
+        width: 180px;
+    }
+
+    .hero-texto h1 {
+        font-size: clamp(28px, 8vw, 42px);
+    }
+
+    .hero .hero-formacao {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .hero-separador {
+        display: block;
+        margin: 3px 0;
+    }
+
+    .hero-texto .frase-principal {
+        font-size: clamp(18px, 5vw, 24px);
+        overflow-wrap: break-word;
+    }
+
+    .hero .hero-texto .apresentacao-descricao {
+        font-size: 16px;
+        line-height: 1.7;
+        overflow-wrap: break-word;
+    }
+
+    .hero .hero-formacao {
+        overflow-wrap: break-word;
+    }
+}
+
+/* ==========================================
+   BOTÃO - DOCUMENTAÇÃO DOS PROJETOS
+========================================== */
+
+.botao-projeto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 20px;
+    margin-top: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #4f46e5
+    );
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    border: 1px solid #a855f7;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+
+.botao-projeto:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.6);
+
+    background: linear-gradient(
+        135deg,
+        #9333ea,
+        #6366f1
+    );
+}
+
+.botao-projeto:focus-visible {
+    outline: 2px solid #00bfff;
+    outline-offset: 4px;
+}
+
+.btn-documentacao {
+    display: inline-block;
+    background: linear-gradient(135deg, #8a2be2, #5b3df5);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+.btn-documentacao:hover {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+}
+
+.status-concluido {
+    display: inline-block;
+    background-color: #00a86b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* RODAPÉ DOS CARDS DE PROJETOS */
+.projeto-rodape {
+    margin-top: auto;
+    align-self: stretch;
+}
+
+/* ==========================================
+   CATEGORIAS DAS HABILIDADES
+========================================== */
+
+.habilidades-categoria {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.habilidades-categoria-titulo {
+    color: #00bfff;
+    font-size: 28px;
+    font-weight: 700;
+
+    margin-bottom: 25px;
+    padding-left: 15px;
+
+    border-left: 4px solid #8a2be2;
+
+    text-shadow: 0 0 12px rgba(0, 191, 255, 0.2);
+}
+
+/* ESPAÇAMENTO ENTRE OS CARDS */
+
+.habilidades-categoria .lista-habilidades {
+    margin-top: 20px;
+}
+
+/* ANIMAÇÃO SUAVE NOS TÍTULOS */
+
+.habilidades-categoria-titulo {
+    transition: color 0.3s ease,
+                text-shadow 0.3s ease;
+}
+
+.habilidades-categoria-titulo:hover {
+    color: #ffffff;
+
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .habilidades-categoria {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    .habilidades-categoria-titulo {
+        font-size: 22px;
+    }
+
+}
+
+/* ==========================================
+   CERTIFICADOS - LAYOUT COM IMAGEM
+========================================== */
+
+.certificado-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ÁREA DA IMAGEM */
+
+.certificado-imagem {
+    flex: 0 0 40%;
+    min-width: 0;
+}
+
+.certificado-imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #8a2be2;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+}
+
+/* INFORMAÇÕES À DIREITA */
+
+.certificado-informacoes {
+    flex: 1;
+    min-width: 0;
+}
+
+.certificado-informacoes h3 {
+    color: #00bfff;
+    margin-top: 0;
+}
+
+/* RODAPÉ DO CERTIFICADO */
+
+.certificado-rodape {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+
+@media (max-width: 768px) {
+
+    .certificado-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .certificado-imagem {
+        flex: none;
+        width: 100%;
+    }
+
+    .certificado-informacoes {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   SOBRE MIM - DESTAQUES PROFISSIONAIS
+========================================== */
+
+.sobre-destaques {
+    margin-top: 35px;
+}
+
+.sobre-destaques > h3 {
+    color: #00bfff;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* ORGANIZAÇÃO EM DUAS COLUNAS */
+
+.sobre-destaques-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* ESTILO DOS DESTAQUES */
+
+.sobre-destaque {
+    background-color: #161c38;
+    border: 1px solid #8a2be2;
+    border-radius: 12px;
+    padding: 20px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sobre-destaque h4 {
+    color: #00bfff;
+    font-size: 17px;
+    margin: 0 0 12px;
+}
+
+.sobre-destaque p {
+    color: #c5c9d6;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ANIMAÇÃO AO PASSAR O MOUSE */
+
+.sobre-destaque:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px rgba(138, 43, 226, 0.35);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .sobre-destaques-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-destaque {
+        padding: 16px;
+    }
+
+}
+
+/* ==========================================
+   CURRÍCULO E SOBRE MIM - ALTURAS IGUAIS
+========================================== */
+
+/* Organiza o conteúdo de cada coluna */
+.curriculo-sobre-layout > section {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Faz os dois cards ocuparem a altura disponível */
+.curriculo-sobre-layout .curriculo-card,
+.curriculo-sobre-layout .sobre-card {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   LOGO DO CABEÇALHO
+========================================== */
+
+.cabecalho .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.cabecalho .logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cabecalho .logo span {
+    color: #00bfff;
+    font-weight: 700;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - CABEÇALHO MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .cabecalho .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .cabecalho .logo img {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+    }
+
+    .cabecalho nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 12px 18px;
+        width: 100%;
+    }
+
+    .cabecalho nav a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
+
+/* CELULARES ESTREITOS: evita itens apertados no cabeçalho. */
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 14px 12px;
+    }
+
+    .cabecalho .logo {
+        gap: 8px;
+        font-size: 20px;
+    }
+
+    .cabecalho .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .cabecalho nav {
+        column-gap: 14px;
+        row-gap: 10px;
+    }
+
+    .cabecalho nav a {
+        font-size: 12px;
+    }
+}

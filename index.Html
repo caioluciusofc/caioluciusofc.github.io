@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Portfólio de Caio Lucius, estudante de Engenharia de Software. Projetos, habilidades, formação acadêmica e experiência profissional em tecnologia.">
+
+    <title>Caio Lucius | Portfólio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/imagens/caio-cubos.png">
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==========================================
+         CHUVA BINÁRIA
+    ========================================== -->
+
+    <canvas
+        id="chuva-binaria"
+        aria-hidden="true"
+    ></canvas>
+
+
+    <!-- ==========================================
+         RASTRO BINÁRIO DO FÓRMULA 87
+    ========================================== -->
+
+    <canvas
+        id="rastro-formula87"
+        aria-hidden="true"
+    ></canvas>
+
+
+    <!-- ==========================================
+         FÓRMULA 87 - VÍDEO INTERATIVO
+    ========================================== -->
+
+    <video
+        id="formula87-mouse"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+    >
+        <source
+            src="assets/Video/formula87.mp4"
+            type="video/mp4"
+        >
+    </video>
+
+
+    <!-- ==========================================
+         TELA DE CARREGAMENTO
+    ========================================== -->
+
+    <div
+        id="loading-screen"
+        role="status"
+        aria-label="Carregando portfólio"
+    >
+
+        <div class="loading-circle">
+
+            <span class="loading-text">
+                LOADING
+            </span>
+
+            <span id="loading-percent">
+                0%
+            </span>
+
+        </div>
+
+        <p class="loading-message">
+            Preparando experiência...
+        </p>
+
+    </div>
+
+
+    <!-- ==========================================
+         CABEÇALHO
+    ========================================== -->
+
+    <header class="cabecalho">
+
+        <a href="#inicio" class="logo" aria-label="Caio Lucius - Início">
+
+    <img
+        src="assets/imagens/caio-cubos.png"
+        alt=""
+        width="50"
+        height="50"
+    >
+
+    <span>Caio Lucius</span>
+
+</a>
+
+        <nav aria-label="Menu principal">
+
+            <a href="#projetos">Projetos</a>
+
+            <a href="#habilidades">Habilidades</a>
+
+            <a href="#certificados">Certificados</a>
+
+            <a href="#curriculo">Currículo</a>
+
+            <a href="#sobre">Sobre</a>
+
+            <a href="#contato">Contato</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+
+    <main>
+
+       
+<!-- ==========================================
+     01 - APRESENTAÇÃO INICIAL
+========================================== -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-conteudo">
+
+        <!-- ======================================
+             COLUNA ESQUERDA - APRESENTAÇÃO
+        ======================================= -->
+
+        <div class="hero-texto">
+
+            <h1>Caio Lucius</h1>
+
+            <p class="hero-formacao">
+                Estudante de Engenharia de Software
+                <span class="hero-separador">|</span>
+                Desenvolvedor em Formação
+            </p>
+
+            <!-- FRASE DE IMPACTO -->
+
+            <h2 class="frase-principal">
+
+                Cada linha de código é uma decisão.
+
+                <span>
+                    Cada solução, uma oportunidade
+                    de transformar o futuro.
+                </span>
+
+            </h2>
+
+            <!-- APRESENTAÇÃO COMPLEMENTAR -->
+
+            <p class="apresentacao-descricao">
+
+                Da infraestrutura de redes ao desenvolvimento
+                de software, conecto experiência profissional,
+                aprendizado e tecnologia para construir
+                novas soluções.
+
+            </p>
+
+        </div>
+
+        <!-- ======================================
+             COLUNA DIREITA - FOTO
+        ======================================= -->
+
+        <div class="hero-imagem">
+
+            <img
+                src="assets/imagens/imagem.hero.png"
+                alt="Foto de Caio Lucius"
+                class="hero-foto"
+                width="300"
+                height="300"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <!-- ==========================================
+             02 - MEUS PROJETOS
+        ========================================== -->
+
+        <section id="projetos">
+
+            <h2>Meus Projetos</h2>
+
+            <p>
+                Conheça os projetos que estou desenvolvendo.
+            </p>
+
+            <div class="lista-projetos">
+
+                <!-- FLASH STOCK -->
+
+                <article class="projeto-card">
+
+                <h3>Flash Stock</h3>
+
+                 <p>
+                    Projeto acadêmico de Engenharia de Software
+                    focado na análise e modelagem de um sistema
+                    web para controle de estoque.
+
+                    Atuei no levantamento de requisitos,
+                    elaboração de diagramas UML,
+                    modelagem do banco de dados e
+                    documentação técnica da solução.
+                </p>
+                        
+                    <div class="projeto-rodape">
+                
+                <div class="projeto-tecnologias">
+                    <span>Requisitos RF/RNF</span>
+                    <span>UML</span>
+                    <span>SQL</span>
+                    <span>Modelagem de Dados</span>
+                    <span>Wireframes</span>
+                </div>
+
+                <span class="concluido">
+                    Documentação concluída
+                </span>
+
+                <a
+                    href="assets/projetos/Flash-Stock.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="botao-projeto"
+                >
+                    Visualizar documentação
+                </a>
+
+                </div>
+
+            </article>
+
+
+                <!-- DRIVERAI -->
+
+                    <article class="projeto-card">
+
+                    <h3>DriverAI</h3>
+
+                    <p>
+                        Aplicativo idealizado para auxiliar motoristas
+                        de transporte por aplicativo no controle
+                        financeiro e na análise de resultados.
+
+                        A proposta contempla acompanhamento de ganhos,
+                        despesas, combustível, quilometragem e metas,
+                        com integração futura de Inteligência Artificial
+                        para registros por voz.
+                    </p>
+
+                    <div class="projeto-rodape">
+                    <div class="projeto-tecnologias">
+                        <span>Gestão Financeira</span>
+                        <span>Análise de Dados</span>
+                        <span>Inteligência Artificial</span>
+                        <span>UX/UI</span>
+                    </div>
+
+                    <span class="planejado">
+                        Em planejamento
+                    </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJETO AUTISMO -->
+
+                <article class="projeto-card">
+
+                    <h3>Projeto de Apoio ao Autismo</h3>
+
+                    <p>
+                        Projeto acadêmico em equipe
+                        voltado para o desenvolvimento
+                        de uma solução digital de apoio
+                        às pessoas autistas e suas famílias.
+
+                        Busca promover informação,
+                        acessibilidade e inclusão.
+                    </p>
+
+
+                    <div class="projeto-rodape">
+                    <span>Em desenvolvimento</span>
+
+                        <span class="status-concluido">
+                            Documentação concluída
+                        </span>
+
+                        <a href="Documentos/TEA-Conecta.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-documentacao">
+                            Visualizar documentação
+                        </a>
+
+                        
+                    </div>
+
+                </article>
+
+            </div>
+
+            
+        </section>
+
+        <!-- ==========================================
+     03 - MINHAS HABILIDADES
+========================================== -->
+
+<section id="habilidades">
+
+    <h2>Minhas Habilidades</h2>
+
+    <p>
+        Conhecimentos, tecnologias e ferramentas que utilizo
+        e desenvolvo durante minha formação em Engenharia de Software.
+    </p>
+
+
+    <!-- ======================================
+         DESENVOLVIMENTO WEB
+    ======================================= -->
+
+    <div class="habilidades-categoria">
+
+        <h3 class="habilidades-categoria-titulo">
+            Desenvolvimento Web
+        </h3>
+
+        <div class="lista-habilidades">
+
+            <article class="habilidade-card">
+
+                <h3>HTML5</h3>
+
+                <p>
+                    Desenvolvimento de páginas web utilizando
+                    HTML5 semântico, formulários, links e
+                    organização de conteúdo.
+                </p>
+
+                <span>Em aprendizado</span>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>CSS3</h3>
+
+                <p>
+                    Estilização de páginas, layouts responsivos,
+                    animações, Flexbox e organização visual
+                    de interfaces.
+                </p>
+
+                <span>Em aprendizado</span>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Desenvolvimento de interatividade para
+                    páginas web, manipulação de elementos HTML
+                    e fundamentos da programação.
+                </p>
+
+                <span>Em aprendizado</span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================
+         PROGRAMAÇÃO E BANCO DE DADOS
+    ======================================= -->
+
+    <div class="habilidades-categoria">
+
+        <h3 class="habilidades-categoria-titulo">
+            Programação e Banco de Dados
+        </h3>
+
+        <div class="lista-habilidades">
+
+            <article class="habilidade-card">
+
+                <h3>Python</h3>
+
+                <p>
+                    Desenvolvimento de algoritmos,
+                    lógica de programação, estruturas
+                    condicionais, laços de repetição
+                    e resolução de problemas.
+                </p>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>Linguagem C</h3>
+
+                <p>
+                    Fundamentos de programação,
+                    estruturas condicionais,
+                    estruturas de repetição
+                    e desenvolvimento de algoritmos.
+                </p>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>MySQL</h3>
+
+                <p>
+                    Modelagem de bancos de dados relacionais,
+                    criação de tabelas, definição de chaves
+                    primárias e estrangeiras e consultas SQL.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================
+         FERRAMENTAS DE DESENVOLVIMENTO
+    ======================================= -->
+
+    <div class="habilidades-categoria">
+
+        <h3 class="habilidades-categoria-titulo">
+            Ferramentas de Desenvolvimento
+        </h3>
+
+        <div class="lista-habilidades">
+
+            <article class="habilidade-card">
+
+                <h3>Visual Studio Code</h3>
+
+                <p>
+                    Editor de código utilizado no
+                    desenvolvimento de projetos
+                    e exercícios de programação.
+                </p>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>Git e GitHub</h3>
+
+                <p>
+                    Fundamentos de versionamento
+                    de código, organização de repositórios
+                    e publicação de projetos.
+                </p>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>Figma</h3>
+
+                <p>
+                    Criação e análise de interfaces,
+                    wireframes e protótipos
+                    de aplicações digitais.
+                </p>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>MySQL Workbench</h3>
+
+                <p>
+                    Criação e gerenciamento de bancos
+                    de dados, elaboração de scripts SQL
+                    e execução de consultas.
+                </p>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>Miro</h3>
+
+                <p>
+                    Organização de pesquisas,
+                    documentação de projetos,
+                    colaboração em equipe
+                    e planejamento de soluções.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================
+         OUTROS CONHECIMENTOS
+    ======================================= -->
+
+    <div class="habilidades-categoria">
+
+        <h3 class="habilidades-categoria-titulo">
+            Outros Conhecimentos
+        </h3>
+
+        <div class="lista-habilidades">
+
+            <article class="habilidade-card">
+
+                <h3>Java</h3>
+
+                <p>
+                    Próxima etapa da minha formação:
+                    programação orientada a objetos,
+                    desenvolvimento de aplicações
+                    e fundamentos do ecossistema Java.
+                </p>
+
+                <span class="planejado">
+                    Estudo planejado
+                </span>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>Inteligência Artificial e Azure</h3>
+
+                <p>
+                    Conhecimentos introdutórios sobre
+                    Inteligência Artificial e serviços
+                    de IA no Microsoft Azure, adquiridos
+                    no curso AI-900 da Fundação Bradesco.
+                </p>
+
+                <span>Fundamentos estudados</span>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>Microsoft Word</h3>
+
+                <p>
+                    Criação, edição e formatação
+                    de documentos, trabalhos acadêmicos
+                    e relatórios técnicos.
+                </p>
+
+                <span>
+                    Ferramenta de produtividade
+                </span>
+
+            </article>
+
+
+            <article class="habilidade-card">
+
+                <h3>Microsoft Excel</h3>
+
+                <p>
+                    Organização de informações em planilhas,
+                    elaboração de tabelas e utilização
+                    de fórmulas para cálculos
+                    e controle de dados.
+                </p>
+
+                <span>
+                    Ferramenta de produtividade
+                </span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- ==========================================
+             04 - MEUS CERTIFICADOS
+        ========================================== -->
+
+        <section id="certificados">
+
+            <h2>Meus Certificados</h2>
+
+            <p>
+                Cursos e capacitações que fazem parte
+                da minha trajetória de aprendizado.
+            </p>
+
+            <div class="lista-certificados">
+
+             <article class="certificado-card">
+
+    <!-- IMAGEM DO CERTIFICADO -->
+    <div class="certificado-imagem">
+
+        <img
+            src="assets/Certificados/certificado-ai900.png"
+            alt="Certificado de conclusão do curso de Fundamentos de Inteligência Artificial no Microsoft Azure"
+            loading="lazy"
+        >
+
+    </div>
+
+    <!-- INFORMAÇÕES DO CERTIFICADO -->
+    <div class="certificado-informacoes">
+
+        <h3>
+            Fundamentos de Inteligência Artificial
+            no Microsoft Azure
+        </h3>
+
+        <p>
+            Curso de fundamentos de Inteligência Artificial,
+            abordando conceitos e serviços de IA
+            no Microsoft Azure.
+        </p>
+
+        <p>
+            <strong>Instituição:</strong>
+            Fundação Bradesco — Escola Virtual
+        </p>
+
+        
+        <p>
+            <strong>Conclusão:</strong>
+            21/07/2026
+        </p>
+
+        <div class="certificado-rodape">
+
+            <span class="concluido">
+                Concluído
+            </span>
+
+            <a
+                href="assets/Certificados/certificado-ai900.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="botao-certificado"
+            >
+                Visualizar certificado
+            </a>
+
+        </div>
+
+    </div>
+
+</article>   
+
+            </div>
+
+        </section>
+
+
+        
+<!-- ==========================================
+     05 E 06 - CURRÍCULO E SOBRE MIM
+========================================== -->
+
+<div class="curriculo-sobre-layout">
+
+    <!-- ======================================
+         COLUNA ESQUERDA - MEU CURRÍCULO
+    ======================================= -->
+
+    <section id="curriculo">
+
+        <h2>Meu Currículo</h2>
+
+        <p>
+            Minha formação acadêmica, experiência profissional
+            e conhecimentos técnicos.
+        </p>
+
+        <div class="curriculo-card">
+
+            <!-- NOME E FOTO -->
+
+            <div class="curriculo-cabecalho">
+
+                <div class="curriculo-apresentacao">
+                    <h3>Caio Lucius</h3>
+                </div>
+
+                <img
+                    src="assets/imagens/foto-caio.png"
+                    alt="Foto profissional de Caio Lucius"
+                    class="curriculo-foto"
+                    width="140"
+                    height="140"
+                >
+
+            </div>
+
+            <!-- FORMAÇÃO ACADÊMICA -->
+
+            <h3>Formação Acadêmica</h3>
+
+            <p>
+                <strong>Engenharia de Software</strong><br>
+                Centro Universitário do Distrito Federal — UDF<br>
+                Graduação em andamento.
+            </p>
+
+            <!-- EXPERIÊNCIA PROFISSIONAL -->
+
+            <h3>Experiência Profissional em Tecnologia</h3>
+
+            <p>
+                <strong>NVW Comunicação e Tecnologia</strong><br>
+                Técnico de Instalação e Reparo<br>
+                2014 – 2019
+            </p>
+
+            <p>
+                Experiência em instalação, configuração,
+                manutenção de redes, diagnóstico de falhas
+                e suporte técnico.
+            </p>
+
+            <p>
+                <strong>EDS</strong><br>
+                Supervisor de Rede Estruturada<br>
+                2012 – 2013
+            </p>
+
+            <p>
+                Coordenação de equipes técnicas,
+                implantação de redes estruturadas,
+                organização de racks e infraestrutura
+                de telecomunicações.
+            </p>
+
+            <p>
+                <strong>Global Village Telecom — GVT</strong><br>
+                Técnico de Instalação<br>
+                2009 – 2011
+            </p>
+
+            <p>
+                Instalação e configuração de equipamentos
+                de rede, manutenção de conexões
+                e atendimento técnico.
+            </p>
+
+            <!-- CONHECIMENTOS TÉCNICOS -->
+
+            <h3>Conhecimentos Técnicos</h3>
+
+            <p>
+                HTML5, CSS3, JavaScript, Python,
+                Linguagem C, MySQL, redes de computadores,
+                infraestrutura de TI e fundamentos
+                de Inteligência Artificial.
+            </p>
+
+            <!-- OBJETIVO PROFISSIONAL -->
+
+            <h3>Objetivo Profissional</h3>
+
+            <p>
+                Conquistar uma oportunidade na área
+                de desenvolvimento de software,
+                aplicando meus conhecimentos técnicos,
+                minha experiência com resolução de problemas
+                e minha dedicação ao aprendizado contínuo.
+            </p>
+
+            <!-- RODAPÉ DO CURRÍCULO -->
+
+            <div class="curriculo-rodape">
+
+                <span class="curriculo-status">
+                    Em constante evolução
+                </span>
+
+                <a
+                    href="assets/curriculo/Caio_Lucius_Curriculo_Tecnologia.pdf"
+                    download="Curriculo_Caio_Lucius.pdf"
+                    class="botao-curriculo"
+                >
+                    📄 Baixar meu currículo
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================
+         COLUNA DIREITA - SOBRE MIM
+    ======================================= -->
+
+    <section id="sobre">
+
+        <h2>Sobre Mim</h2>
+
+        <p>
+            Conheça um pouco mais sobre minha trajetória
+            e minha paixão pela tecnologia.
+        </p>
+
+        <div class="sobre-card">
+
+            <h3>Construindo minha trajetória na tecnologia</h3>
+
+            <p>
+                Sou Caio Lucius, estudante de Engenharia de Software
+                no Centro Universitário do Distrito Federal (UDF),
+                com experiência profissional em telecomunicações,
+                infraestrutura de redes, suporte técnico e
+                coordenação de equipes.
+            </p>
+
+            <p>
+                Minha trajetória começou com a instalação,
+                configuração e manutenção de sistemas de
+                comunicação. Essas experiências fortaleceram
+                minha capacidade de resolver problemas,
+                trabalhar em equipe e compreender a importância
+                de soluções tecnológicas confiáveis.
+            </p>
+
+            <p>
+                Atualmente, estou direcionando minha carreira
+                para o desenvolvimento de software, aprofundando
+                meus conhecimentos em programação, banco de dados
+                e engenharia de sistemas.
+            </p>
+
+            <p>
+                Durante minha formação, participo de projetos
+                acadêmicos voltados à solução de problemas reais,
+                incluindo sistemas de gestão de estoque,
+                ferramentas de controle financeiro e aplicações
+                relacionadas à acessibilidade.
+            </p>
+
+            <p>
+                Busco uma oportunidade de estágio ou de
+                desenvolvimento júnior, na qual possa contribuir
+                com minha experiência, ampliar minhas habilidades
+                e crescer profissionalmente.
+            </p>
+
+            <!-- DESTAQUES PROFISSIONAIS -->
+
+<div class="sobre-destaques">
+
+    <h3>Meu Perfil Profissional</h3>
+
+    <div class="sobre-destaques-grid">
+
+        <div class="sobre-destaque">
+            <h4>💻 Foco Atual</h4>
+            <p>
+                Desenvolvimento de software,
+                programação e banco de dados.
+            </p>
+        </div>
+
+        <div class="sobre-destaque">
+            <h4>🌐 Experiência</h4>
+            <p>
+                Infraestrutura de redes,
+                telecomunicações e suporte técnico.
+            </p>
+        </div>
+
+        <div class="sobre-destaque">
+            <h4>🎯 Competências</h4>
+            <p>
+                Resolução de problemas,
+                organização e trabalho em equipe.
+            </p>
+        </div>
+
+        <div class="sobre-destaque">
+            <h4>🚀 Objetivo</h4>
+            <p>
+                Conquistar uma oportunidade
+                profissional em desenvolvimento
+                de software.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- ==========================================
+     07 - CONTATO
+========================================== -->
+
+<section id="contato">
+
+    <h2>Entre em Contato</h2>
+
+    <p class="contato-descricao">
+        Aberto a oportunidades profissionais,
+        novos projetos e conexões na área de tecnologia.
+    </p>
+
+    <div class="contato-icones">
+
+        <!-- GITHUB -->
+
+        <a
+            href="https://github.com/caioluciusofc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contato-icone"
+            aria-label="Acessar meu GitHub"
+            title="GitHub"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+            >
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.73 0-1.27.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.16 1.19A11 11 0 0 1 12 6.41c.98 0 1.96.13 2.88.39 2.19-1.5 3.16-1.19 3.16-1.19.63 1.6.23 2.78.11 3.07.74.81 1.19 1.84 1.19 3.11 0 4.46-2.7 5.44-5.28 5.72.41.36.77 1.06.77 2.13 0 1.54-.01 2.78-.01 3.16 0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+            </svg>
+
+        </a>
+
+        <!-- LINKEDIN -->
+
+        <a
+            href="https://www.linkedin.com/in/caio-lucius-0107a7431/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contato-icone linkedin"
+            aria-label="Acessar meu LinkedIn"
+            title="LinkedIn"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+            >
+                <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.46 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.29 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.4-.75 1.36-1.55 2.79-1.55 2.98 0 3.58 1.96 3.58 4.51v5.29Z"/>
+            </svg>
+
+        </a>
+
+        <!-- E-MAIL -->
+
+        <a
+            href="mailto:caiolucius.87@gmail.com"
+            class="contato-icone"
+            aria-label="Enviar e-mail para Caio Lucius"
+            title="E-mail"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+            >
+                <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2 9 6 9-6H3Zm18 10V9.4l-8.45 5.63a1 1 0 0 1-1.1 0L3 9.4V17h18Z"/>
+            </svg>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+    </main>
+
+</body>
+
+</html>
