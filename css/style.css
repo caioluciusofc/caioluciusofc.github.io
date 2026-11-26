@@ -131,6 +131,10 @@ main {
    ========================================== */
 
 .cabecalho {
+
+    position: sticky;
+    top: 0;
+    z-index: 200;
     width: 100%;
     padding: 20px 40px;
 
